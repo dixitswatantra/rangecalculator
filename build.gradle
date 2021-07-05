@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+archivesBaseName = 'rangecalce'
+version = '1.0-SNAPSHOT' 
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.swattech.rangecalculator.RangeCalcultor'
+    }
+}
+
+dependencies {
+	
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.9'
+  	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+   
+} 
+
+test {
+    useJUnitPlatform()
+
+}
