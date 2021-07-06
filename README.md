@@ -79,10 +79,12 @@ $ java -jar rangecalce-1.0-SNAPSHOT.jar [10000,20000] [20000,25000] [20000,30000
 ---- TESTCASE ----
 INPUT ZIPCODE RANGE :
 [[10000,20000], [20000,25000], [20000,30000], [10000,15000], [70000,70001]]
+
 OUTPUT ZIPCODE RANGE :
 [[10000,30000], [70000,70001]]
 
 
+###### NOTE : something like above can be seen at commandline after executing java -jar commmad. Here, INPUT ZIPCODE RANGE shows what input has been provided from commandline and then , OUTPUT ZIPCDOE RANGE : provides final output for minumum zipcode list derived.
 
 #### ===============Code Coeverage is 87.3 %========================
 
