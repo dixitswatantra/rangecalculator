@@ -86,7 +86,7 @@ OUTPUT ZIPCODE RANGE :
 
 ###### NOTE : something like above can be seen at commandline after executing java -jar commmad. Here, INPUT ZIPCODE RANGE shows what input has been provided from commandline and then , OUTPUT ZIPCDOE RANGE : provides final output for minumum zipcode list derived.
 
-#### ===============Code Coeverage is 87.3 %========================
+#### ===============Code Coverage is 87.3 %========================
 
 
 
