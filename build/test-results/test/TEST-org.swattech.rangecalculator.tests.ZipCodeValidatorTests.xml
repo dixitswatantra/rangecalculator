@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.swattech.rangecalculator.tests.ZipCodeValidatorTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-07-06T17:10:13" hostname="SWDIXIT-WT1" time="0.006">
+  <properties/>
+  <testcase name="test_validateZipCode()" classname="org.swattech.rangecalculator.tests.ZipCodeValidatorTests" time="0.004"/>
+  <testcase name="test_getValidZipRanges()" classname="org.swattech.rangecalculator.tests.ZipCodeValidatorTests" time="0.001"/>
+  <testcase name="test_parseAndCreateZipCodeRange()" classname="org.swattech.rangecalculator.tests.ZipCodeValidatorTests" time="0.001"/>
+  <system-out><![CDATA[ZipCode must be non ZERO digit :[9413300,0]
+ZipCode must be 5 digits :[94133,9413300]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

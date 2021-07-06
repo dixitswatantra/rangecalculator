@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.swattech.rangecalculator.tests.RangeCalculatorTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-07-06T17:10:13" hostname="SWDIXIT-WT1" time="0.027">
+  <properties/>
+  <testcase name="test_rangeCalculator_1()" classname="org.swattech.rangecalculator.tests.RangeCalculatorTests" time="0.02"/>
+  <testcase name="test_rangeCalculator_2()" classname="org.swattech.rangecalculator.tests.RangeCalculatorTests" time="0.001"/>
+  <testcase name="test_rangeCalculator_3()" classname="org.swattech.rangecalculator.tests.RangeCalculatorTests" time="0.001"/>
+  <testcase name="test_rangeCalculator_4()" classname="org.swattech.rangecalculator.tests.RangeCalculatorTests" time="0.001"/>
+  <testcase name="test_rangeCalculator_5()" classname="org.swattech.rangecalculator.tests.RangeCalculatorTests" time="0.001"/>
+  <testcase name="test_rangeCalculator_6()" classname="org.swattech.rangecalculator.tests.RangeCalculatorTests" time="0.001"/>
+  <system-out><![CDATA[---- TESTCASE 1 ---- 
+INPUT ZIPCODE RANGE : 
+[[94600,94699], [76600,84699], [64600,64699], [64700,64700], [77999,78000], [94133,98000]]
+OUTPUT ZIPCODE RANGE : 
+[[64600,64700], [76600,84699], [94133,98000]]
+
+---- TESTCASE 2 ---- 
+INPUT ZIPCODE RANGE : 
+[[94600,94699], [76600,84699], [77999,78000], [94133,98000]]
+OUTPUT ZIPCODE RANGE : 
+[[76600,84699], [94133,98000]]
+
+---- TESTCASE 3 ---- 
+INPUT ZIPCODE RANGE : 
+[[0,11111], [76600,84699], [35353,35353], [94133,98000]]
+OUTPUT ZIPCODE RANGE : 
+[[0,11111], [35353,35353], [76600,84699], [94133,98000]]
+
+---- TESTCASE 4 ---- 
+INPUT ZIPCODE RANGE : 
+[[94133,94133], [94200,94299], [94600,94699]]
+OUTPUT ZIPCODE RANGE : 
+[[94133,94133], [94200,94299], [94600,94699]]
+
+---- TESTCASE 5 ---- 
+INPUT ZIPCODE RANGE : 
+[[12121,12122], [12124,12127], [12120,12127]]
+OUTPUT ZIPCODE RANGE : 
+[[12120,12127]]
+
+---- TESTCASE 6 ---- 
+INPUT ZIPCODE RANGE : 
+[[12121,12122], [12124,12127], [12127,12130]]
+OUTPUT ZIPCODE RANGE : 
+[[12121,12122], [12124,12130]]
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
