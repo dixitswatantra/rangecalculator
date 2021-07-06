@@ -34,7 +34,7 @@ public class RangeCalculator {
 	 * @param zipCodeRanges List of {@link ZipCodeRange}
 	 * @return
 	 */
-	private List<ZipCodeRange> calculateMinRange(List<ZipCodeRange> zipCodeRanges) {
+	public List<ZipCodeRange> calculateMinRange(List<ZipCodeRange> zipCodeRanges) {
 
 		// Sorting has been used to place all ZipCodeRange in List in ascending order
 		// only based on lowerbound.
