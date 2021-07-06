@@ -43,3 +43,7 @@ Then the output should be = [94133,94133] [94200,94299] [94600,94699]
 If the input = [94133,94133] [94200,94299] [94226,94399]
 
 Then the output should be = [94133,94133] [94200,94399]
+
+
+<img width="788" alt="Code_Coverage" src="https://user-images.githubusercontent.com/43265292/124636464-90091480-de56-11eb-9809-7071cec939a8.PNG">
+
