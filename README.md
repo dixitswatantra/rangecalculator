@@ -83,6 +83,23 @@ INPUT ZIPCODE RANGE :
 OUTPUT ZIPCODE RANGE :
 [[10000,30000], [70000,70001]]
 
+#### ===============================Support of Zipcodes starting with ZEROS===============================
+
+$ java -jar rangecalce-1.0-SNAPSHOT.jar [00000,00001] [00001,060000] [10000,20000] [20000,25000] [20000,30000] [10000,15000] [70000,70001]
+******************************
+********RANGE CALCULATOR******
+******************************
+
+Range string [00001,060000] is in an invalid format.  Use [nnnnn,nnnnn]
+---- TESTCASE ----
+INPUT ZIPCODE RANGE :
+[[00000,00001], [10000,20000], [20000,25000], [20000,30000], [10000,15000], [70000,70001]]
+ZipCode must be non ZERO digit :[00000,00001]
+OUTPUT ZIPCODE RANGE :
+[[10000,30000], [70000,70001]]
+
+
+### Note : "00000" treated as invalid Zipcode and invalid pairs are removed and results are based on valid ZipCodes.
 
 ###### NOTE : something like above can be seen at commandline after executing java -jar commmad. Here, INPUT ZIPCODE RANGE shows what input has been provided from commandline and then , OUTPUT ZIPCDOE RANGE : provides final output for minumum zipcode list derived.
 
