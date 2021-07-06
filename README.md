@@ -45,5 +45,22 @@ If the input = [94133,94133] [94200,94299] [94226,94399]
 Then the output should be = [94133,94133] [94200,94399]
 
 
+=============== Project Highlights ==================
+
+To test run this project , Command line arguments can be provided or can add inputs in Junit tests to execute .
+
+******************************
+********RANGE CALCULATOR******
+******************************
+
+---- TESTCASE ---- 
+INPUT ZIPCODE RANGE : 
+[[10000,20000], [20000,25000], [20000,30000], [10000,15000], [70000,70001]]
+OUTPUT ZIPCODE RANGE : 
+[[10000,30000], [70000,70001]]
+
+
+===============Code Coeverage========================
+
 <img width="788" alt="Code_Coverage" src="https://user-images.githubusercontent.com/43265292/124636464-90091480-de56-11eb-9809-7071cec939a8.PNG">
 
