@@ -9,7 +9,7 @@ repositories {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'org.swattech.rangecalculator.RangeCalcultor'
+        attributes 'Main-Class': 'org.swattech.rangecalculator.CommandLineInput'
     }
 }
 
