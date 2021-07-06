@@ -77,6 +77,8 @@ OS:           Windows 10 10.0 amd64
 
 swdixit@SWDIXIT-WT1 MINGW64 ~/eclipse-workspace/github/rangecalculator/build/libs (main)
 $ java -jar rangecalce-1.0-SNAPSHOT.jar [10000,20000] [20000,25000] [20000,30000] [10000,15000] [70000,70001]
+
+
 ******************************
 ********RANGE CALCULATOR******
 ******************************
@@ -89,7 +91,9 @@ OUTPUT ZIPCODE RANGE :
 
 
 
-===============Code Coeverage========================
+===============Code Coeverage is 87.3 %========================
+
+
 
 <img width="788" alt="Code_Coverage" src="https://user-images.githubusercontent.com/43265292/124636464-90091480-de56-11eb-9809-7071cec939a8.PNG">
 
