@@ -1,2 +1,1 @@
-# minrangecalculator
 # rangecalculator
