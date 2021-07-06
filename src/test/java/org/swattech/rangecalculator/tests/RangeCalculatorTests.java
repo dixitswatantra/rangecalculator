@@ -31,7 +31,7 @@ public class RangeCalculatorTests {
 		rangeList.add(new ZipCodeRange(94133, 98000));
 		System.out.println("---- TESTCASE 1 ---- \nINPUT ZIPCODE RANGE : ");
 		System.out.println(rangeList);
-		List<ZipCodeRange> actualZipCodes = rangeCalce.calculateMinRange(rangeList);
+		List<ZipCodeRange> actualZipCodes = rangeCalce.processZipCodeInputList(rangeList);
 		System.out.println("OUTPUT ZIPCODE RANGE : ");
 		System.out.println(actualZipCodes + "\n");
 		List<ZipCodeRange> expectedZipCodes = new ArrayList();
@@ -55,7 +55,7 @@ public class RangeCalculatorTests {
 
 		System.out.println("---- TESTCASE 2 ---- \nINPUT ZIPCODE RANGE : ");
 		System.out.println(rangeList);
-		List<ZipCodeRange> actualZipCodes = rangeCalce.calculateMinRange(rangeList);
+		List<ZipCodeRange> actualZipCodes = rangeCalce.processZipCodeInputList(rangeList);
 		System.out.println("OUTPUT ZIPCODE RANGE : ");
 		System.out.println(actualZipCodes + "\n");
 		List<ZipCodeRange> expectedZipCodes = new ArrayList();
@@ -73,19 +73,19 @@ public class RangeCalculatorTests {
 		RangeCalculator rangeCalce = new RangeCalculator();
 		List<ZipCodeRange> rangeList = new ArrayList();
 
-		rangeList.add(new ZipCodeRange(00000, 11111));
+		rangeList.add(new ZipCodeRange(00001, 11111));
 		rangeList.add(new ZipCodeRange(76600, 84699));
 		rangeList.add(new ZipCodeRange(35353, 35353));
 		rangeList.add(new ZipCodeRange(94133, 98000));
 
 		System.out.println("---- TESTCASE 3 ---- \nINPUT ZIPCODE RANGE : ");
 		System.out.println(rangeList);
-		List<ZipCodeRange> actualZipCodes = rangeCalce.calculateMinRange(rangeList);
+		List<ZipCodeRange> actualZipCodes = rangeCalce.processZipCodeInputList(rangeList);
 
 		System.out.println("OUTPUT ZIPCODE RANGE : ");
 		System.out.println(actualZipCodes + "\n");
 		List<ZipCodeRange> expectedZipCodes = new ArrayList();
-		expectedZipCodes.add(new ZipCodeRange(00000, 11111));
+		expectedZipCodes.add(new ZipCodeRange(00001, 11111));
 		expectedZipCodes.add(new ZipCodeRange(35353, 35353));
 		expectedZipCodes.add(new ZipCodeRange(76600, 84699));
 		expectedZipCodes.add(new ZipCodeRange(94133, 98000));
@@ -106,7 +106,7 @@ public class RangeCalculatorTests {
 
 		System.out.println("---- TESTCASE 4 ---- \nINPUT ZIPCODE RANGE : ");
 		System.out.println(rangeList);
-		List<ZipCodeRange> actualZipCodes = rangeCalce.calculateMinRange(rangeList);
+		List<ZipCodeRange> actualZipCodes = rangeCalce.processZipCodeInputList(rangeList);
 
 		System.out.println("OUTPUT ZIPCODE RANGE : ");
 		System.out.println(actualZipCodes + "\n");
@@ -131,7 +131,7 @@ public class RangeCalculatorTests {
 
 		System.out.println("---- TESTCASE 5 ---- \nINPUT ZIPCODE RANGE : ");
 		System.out.println(rangeList);
-		List<ZipCodeRange> actualZipCodes = rangeCalce.calculateMinRange(rangeList);
+		List<ZipCodeRange> actualZipCodes = rangeCalce.processZipCodeInputList(rangeList);
 
 		System.out.println("OUTPUT ZIPCODE RANGE : ");
 		System.out.println(actualZipCodes + "\n");
@@ -154,7 +154,7 @@ public class RangeCalculatorTests {
 
 		System.out.println("---- TESTCASE 6 ---- \nINPUT ZIPCODE RANGE : ");
 		System.out.println(rangeList);
-		List<ZipCodeRange> actualZipCodes = rangeCalce.calculateMinRange(rangeList);
+		List<ZipCodeRange> actualZipCodes = rangeCalce.processZipCodeInputList(rangeList);
 
 		System.out.println("OUTPUT ZIPCODE RANGE : ");
 		System.out.println(actualZipCodes + "\n");
@@ -162,6 +162,24 @@ public class RangeCalculatorTests {
 		expectedZipCodes.add(new ZipCodeRange(12121, 12122));
 		expectedZipCodes.add(new ZipCodeRange(12124, 12130));
 
+		assertEquals(expectedZipCodes, actualZipCodes);
+
+	}
+	
+	
+	@Test
+	public void test_rangeCalculator_ZEROS() {
+
+		RangeCalculator rangeCalce = new RangeCalculator();
+		List<ZipCodeRange> rangeList = new ArrayList();
+
+		rangeList.add(new ZipCodeRange(0, 94699));
+		System.out.println("---- TESTCASE 1 ---- \nINPUT ZIPCODE RANGE : ");
+		System.out.println(rangeList);
+		List<ZipCodeRange> actualZipCodes = rangeCalce.processZipCodeInputList(rangeList);
+		System.out.println("OUTPUT ZIPCODE RANGE : ");
+		System.out.println(actualZipCodes + "\n");
+		List<ZipCodeRange> expectedZipCodes = new ArrayList();
 		assertEquals(expectedZipCodes, actualZipCodes);
 
 	}

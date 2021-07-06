@@ -13,7 +13,7 @@ import java.util.TreeSet;
  *
  */
 public class ZipCodeRange implements Comparable {
-	
+
 	private int lowerbound;
 	private int upperbound;
 
@@ -63,7 +63,11 @@ public class ZipCodeRange implements Comparable {
 
 	@Override
 	public String toString() {
-		return "[" + lowerbound + "," + upperbound + "]";
+
+		String lowerBound = String.format("%05d", lowerbound);
+		String upperBound = String.format("%05d", upperbound);
+
+		return "[" + lowerBound + "," + upperBound + "]";
 	}
 
 	@Override

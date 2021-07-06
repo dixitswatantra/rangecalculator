@@ -21,7 +21,8 @@ public class CommandLineInput {
 		List<ZipCodeRange> ranges = new ArrayList<ZipCodeRange>();
 		for (String rangeString : args) {
 			if (!ZipCodeValidator.validateCommandLineArgs(rangeString))
-				System.err.println("Range string " + rangeString + " is in an invalid format.  Use [nnnnn,nnnnn]");
+				System.err.println("Range string " + rangeString
+						+ " is in an invalid format.  Must be 5 digit number [nnnnn,nnnnn]");
 			else {
 				ZipCodeRange codeRange = ZipCodeValidator.parseAndCreateZipCodeRange(rangeString);
 				ranges.add(codeRange);

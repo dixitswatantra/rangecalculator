@@ -15,6 +15,7 @@ import org.swattech.rangecalculator.model.ZipCodeRange;
  */
 public class ZipCodeValidator {
 
+	private static final String _00000 = "00000";
 	private static Pattern pattern = null;
 	static {
 		String regex = "^[0-9]{5}";
@@ -43,6 +44,26 @@ public class ZipCodeValidator {
 	}
 
 	/**
+	 * Method to validate Zipcodes of range provided
+	 * 
+	 * @param lowerbound - zipcode lowerbound
+	 * @param upperbound - zipcode upperbound
+	 * @throws Exception - new exception with custome message.
+	 */
+	public static void validateZipCode(String lowerbound, String upperbound) throws Exception {
+
+		if (_00000.equals(lowerbound) || _00000.equals(lowerbound)) {
+			throw new Exception("ZipCode must be non ZERO digit :[" + lowerbound + "," + upperbound + "]");
+		}
+		boolean lowerMatcher = pattern.matcher(lowerbound).matches();
+		boolean upperMatcher = pattern.matcher(upperbound).matches();
+		if (!lowerMatcher || !upperMatcher) {
+			throw new Exception("ZipCode must be 5 digits :[" + lowerbound + "," + upperbound + "]");
+		}
+
+	}
+
+	/**
 	 * This method is to return valid {@link ZipCodeRange}
 	 * 
 	 * @param zipCoderanges - list of input {@link ZipCodeRange}
@@ -53,9 +74,12 @@ public class ZipCodeValidator {
 		if (null == zipCoderanges && zipCoderanges.size() <= 0) {
 			return null;
 		}
+
 		for (ZipCodeRange codeRange : zipCoderanges) {
 			try {
-				validateZipCode(codeRange.getLowerbound(), codeRange.getUpperbound());
+				String lowerbound = String.format("%05d", codeRange.getLowerbound());
+				String upperbound = String.format("%05d", codeRange.getUpperbound());
+				validateZipCode(lowerbound, upperbound);
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 				continue;
